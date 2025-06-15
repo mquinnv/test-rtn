@@ -1,0 +1,20 @@
+name: No-op Workflow
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Do nothing successfully
+      run: |
+        echo "This workflow does nothing and completes successfully!"
+        echo "Current date: $(date)"
+        echo "Workflow completed! ✅"
+
