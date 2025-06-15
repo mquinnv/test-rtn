@@ -8,3 +8,6 @@ git add uuid
 git commit -m "tweak"
 git push
 
+# Show the short commit hash for easy identification
+echo "🔨 Commit hash: "(git rev-parse --short HEAD)
+
